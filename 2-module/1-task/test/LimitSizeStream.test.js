@@ -28,7 +28,7 @@ describe('2-module-1-task', () => {
     });
 
     it('при превышении лимита выбрасывается ошибка', (done) => {
-      const limitStream = new LimitSizeStream({limit: 2});
+      const limitStream = new LimitSizeStream({limit: 2, encoding: 'utf-8'});
 
       const onData = sinon.spy();
 
